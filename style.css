@@ -1,0 +1,85 @@
+/* Background */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Bubbles background effect */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://www.transparenttextures.com/patterns/cubes.png");
+  opacity: 0.02;
+}
+
+/* Stopwatch Card */
+.stopwatch-container {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  z-index: 1;
+  width: 340px;
+}
+
+/* Heading */
+.stopwatch-container h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #00ffff;
+}
+
+/* Display */
+#display {
+  font-size: 48px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* Buttons */
+.buttons button {
+  background-color: #00ffff;
+  border: none;
+  color: black;
+  padding: 10px 16px;
+  margin: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.buttons button:hover {
+  background-color: #00cccc;
+}
+
+/* Lap list */
+#laps {
+  margin-top: 20px;
+  list-style-type: none;
+  padding-left: 0;
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+#laps li {
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+  color: #eeeeee;
+}
